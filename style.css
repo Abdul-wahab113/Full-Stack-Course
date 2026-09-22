@@ -121,7 +121,7 @@ PROFILE CARD
 
 /* PSEUDO ELEMENT */
 
-.profile-card::before {
+.profile-card::after {
     content: "PROFILE";
     position: absolute;
     top: -12px;
@@ -146,7 +146,8 @@ CSS FLEXBOX
 ========================================= */
 .skills-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 20px;
@@ -178,7 +179,7 @@ PROJECT SECTION
 .project-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 25px;
 }
 
@@ -194,7 +195,7 @@ PROJECT SECTION
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
 /* =========================================
@@ -221,7 +222,7 @@ PROJECT IMAGE
 CSS FILTER
 ========================================= */
 .grayscale img {
-    filter: grayscale(100%);
+    filter: brightness(70%);
 }
 
 .grayscale:hover img {
@@ -270,7 +271,7 @@ POSITIONING
 }
 
 .featured-badge {
-    position: absolute;
+    position: relative;
     top: 15px;
     right: 15px;
     background: #ffc107;
@@ -330,4 +331,45 @@ RESPONSIVE DESIGN
     .flex-item {
         width: 100%;
     }
+}
+
+
+/* new section styling */
+/* =========================================
+   LAB 03 - ACADEMIC MANAGEMENT
+========================================= */
+
+.academic-section {
+    background: #f8f9fa;
+}
+
+.academic-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.academic-card h3 {
+    margin-bottom: 20px;
+    color: #0d6efd;
+}
+
+.student-information p,
+.marks-information p,
+.academic-results p {
+    margin-bottom: 10px;
+}
+
+.student-information strong,
+.marks-information strong,
+.academic-results strong {
+    display: inline-block;
+    min-width: 190px;
+}
+
+.academic-results {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
 }
